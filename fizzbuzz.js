@@ -10,15 +10,16 @@ const message = (num) => {
     } else if (num % 5 === 0) {
         message = 'Buzz'
     } else {
-        message = 'null'
+        message = null
     }
+
     return message
 }
 
 const result = () => {
-    const arr = _.range(1, 116)
-    
-    console.log(arr.map(x => `${x}: ` + message(x) ))
+    const arr = _.range(1, 116).filter(x => x % 3 == 0 || x % 5 == 0)
+
+    console.log(arr.map(x => `${x}: ` + message(x)))
 }
 
 result()
