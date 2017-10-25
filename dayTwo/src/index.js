@@ -1,5 +1,5 @@
-import { g } from './destructuring'
+import { g } from './destructuring';
 
-const arr = ['Shakhor', 'Smith']
+const arr = ['Shakhor', 'Smith'];
 
-g(arr)
+g(arr);
