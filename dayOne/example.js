@@ -6,7 +6,7 @@ Note that inserting the three dots to the end will add to the string length.
 However, if the given maximum string length num is less than or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.
 */
 
-function truncateString(str, num) {
+let truncateString = (str, num) => {
   if (str.length > num && num <= 3) {
     return str.slice(0, num) + '...';
   }
@@ -16,6 +16,6 @@ function truncateString(str, num) {
   }
 }
 
-console.log(truncateString('A-tisket a-tasket A green and yellow basket', 11));
-console.log(truncateString('A-tisket a-tasket A green and yellow basket', 7));
+console.log(truncateString('Shakhor', 6));
+console.log(truncateString('Classasasas', 7));
 console.log(truncateString('A-t', 2));
