@@ -1,22 +1,23 @@
 /*
-Given the string, check if it is a palindrome.
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
-Example
+Note that inserting the three dots to the end will add to the string length.
 
-For inputString = "aabaa", the output should be
-checkPalindrome(inputString) = true;
-For inputString = "abac", the output should be
-checkPalindrome(inputString) = false;
-For inputString = "a", the output should be
-checkPalindrome(inputString) = true.
+However, if the given maximum string length num is less than or equal to 3, then the addition of the three dots does not add to the string length in determining the truncated string.
 */
 
-function checkPalindrome(inputString) {
-    let reverse = inputString.split('').reverse().join('');
+function truncateString(str, num) {
+  if (str.length > num && num <= 3) {
+    return str.slice(0, num) + '...';
+  }
 
-    if (inputString === reverse) {
-        return true
-    }
+  if (str.length > num && num > 3) {
+    return str.slice(0, num - 3) + '...';
+  }
 
-    return false
+  return str;
 }
+
+console.log(truncateString('A-tisket a-tasket A green and yellow basket', 11));
+console.log(truncateString('A-tisket a-tasket A green and yellow basket', 7));
+console.log(truncateString('A-t', 2));
