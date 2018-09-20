@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "js-day-1/package.json",
+        "js-day-2/package.json",
+        "js-day-5/package.json"
+      ]
+    }
+  }
+}
